@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('views.about') }}">About</a></li>
+            <li><a href="{{ url_for('views.home') }}"><img src="{{ url_for('static', filename='homeLogo.webp')}}" alt="Home" class="home-icon"></a></li>
+            <li><a href="{{ url_for('views.login') }}">Login</a></li>
+        </ul>
+    </nav>    
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

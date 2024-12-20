@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome to TuneTrivia!</h1>
+    <p>Select a music genre below and see just how widespread your musical knowledge is</p>
+    <div class="button-container">
+        <a href="{{ url_for('views.rock') }}" class="button">Rock</a>
+        <a href="{{ url_for('views.pop') }}" class="button">Pop</a>
+        <a href="{{ url_for('views.indie') }}" class="button">Indie</a>
+        <a href="{{ url_for('views.rap') }}" class="button">Rap</a>
+        <a href="{{ url_for('views.folk') }}" class="button">Folk</a>
+        <a href="{{ url_for('views.country') }}" class="button">Country</a>
+    </div>
+{% endblock %}
